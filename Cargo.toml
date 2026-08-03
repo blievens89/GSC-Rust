@@ -1,0 +1,20 @@
+[package]
+name = "gsc-mcp-rs"
+version = "0.1.0"
+edition = "2021"
+description = "MCP server for Google Search Console — search analytics, SEO analysis, URL inspection, and sitemaps"
+license = "MIT"
+
+[dependencies]
+rmcp = { version = "2.2", features = ["server", "macros", "transport-io"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "time", "net", "io-std", "io-util", "signal"] }
+reqwest = { version = "0.13", default-features = false, features = ["json", "form", "rustls", "rustls-native-certs", "http2", "charset"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+lru = "0.18"
+percent-encoding = "2"
+getrandom = "0.3"
+sha2 = "0.10"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }

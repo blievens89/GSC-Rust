@@ -1,0 +1,5 @@
+/target
+gsccredentials.json
+token.json
+.DS_Store
+*.stackdump
